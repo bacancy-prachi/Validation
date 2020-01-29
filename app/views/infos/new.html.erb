@@ -1,0 +1,73 @@
+<%= form_for @infos do |i| %>
+<% if @infos.errors.any? %>
+<h2><%= pluralize(@infos.errors.count, "Errors") %> Thrown:</h2>
+
+<ul><% @infos.errors.full_messages.each do |message| %><%= message%><ul></ul>
+<% end %>
+</ul>
+<% end %>
+
+<div>
+    <%= i.label :First_name %>
+    <%= i.text_field :fname %>
+</div>
+<div>
+    <%= i.label :Last_name %>
+    <%= i.text_field :lname %>
+</div>
+<div>
+    <%= i.label :Email %>
+    <%= i.text_field :email %>
+</div>
+<div>
+    <%= i.label :Age %>
+    <%= i.number_field :age %>
+</div>
+<div>
+    <%= i.label :Degree %>
+    <%= i.text_field :degree %>
+</div>
+<div>
+    <%= i.label :Passing_year %>
+    <%= i.number_field :passing_year %>
+</div>
+<div>
+    <%= i.label :Company_name %>
+    <%= i.text_field :company %>
+</div>
+<div>
+    <%= i.label :Webiste%>
+    <%= i.text_field :website %>
+</div>
+<div>
+    <%= i.label :Address1 %>
+    <%= i.text_area :add1 %>
+</div>
+<div>
+    <%= i.label :Address2 %>
+    <%= i.text_area :add2 %>
+</div>
+<div>
+    <%= i.label :City%>
+    <%= i.text_field :city  %>
+</div>
+<div>
+    <%= i.label :State%>
+    <%= i.text_field :state %>
+</div>
+<div>
+    <%= i.label :Pincode %>
+    <%= i.number_field :pincode %>
+</div>
+  <div>
+        <%= i.label :Password %>
+        <%= i.password_field :password %>
+    </div>
+    <div>
+        <%= i.label :Username %>
+        <%= i.text_field :user_name %>
+    </div>
+<div>
+    <%= i.submit %>
+</div>
+<% end %>

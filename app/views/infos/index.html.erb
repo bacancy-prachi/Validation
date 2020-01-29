@@ -1,0 +1,48 @@
+<h1>Employee Information</h1>
+<%= link_to "create record", new_info_path %>
+<table border="2">
+<thead>
+<th>First_name</th>
+<th>Last_name</th>
+<th>Email</th>
+<th>Age</th>
+<th>Degree</th>
+<th>Passing_year</th>
+<th>Company_name</th>
+<th>Website</th>
+<th>Address1</th>
+<th>Address2</th>
+<th>City</th>
+<th>State</th>
+<th>Pincode</th>
+<th>Password</th>
+<th>Username</th>
+</thead>
+<% @infos.each do |info| %>
+<tr>
+<td><%= info.fname %></td>
+<td><%= info.lname %></td>
+<td><%= info.email %></td>
+<td><%= info.age %></td>
+<td><%= info.degree %></td>
+<td><%= info.passing_year %></td>
+<td><%= info.company %></td>
+<td><%= info.website %></td>
+<td><%= info.add1 %></td>
+<td><%= info.add2 %></td>
+<td><%= info.city %></td>
+<td><%= info.state %></td>
+<td><%= info.pincode %></td>
+<td><%= info.password %></td>
+<td><%= info.user_name %></td>
+
+
+<td>
+<%= link_to "create record", new_info_path %>
+<%= link_to "edit", edit_info_path(info) %>
+<%= link_to "delete", info, method: :delete, data: {confirm: "are you sure?"}%>
+</td>
+</tr>
+
+<% end %>
+</table>
